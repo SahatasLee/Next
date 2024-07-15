@@ -4,7 +4,7 @@ import React from 'react'
 const Login = () => {
   return (
     <div>
-        <button onClick={() => console.log("Click")}>CLick</button>
+        <button onClick={() => console.log("Click")}>Click</button>
     </div>
   )
 }

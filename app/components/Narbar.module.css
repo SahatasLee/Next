@@ -1,0 +1,16 @@
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #f8f9fa; /* example background color */
+}
+
+.left {
+    display: flex;
+    gap: 1rem; /* space between links */
+}
+
+.right {
+    margin-left: auto; /* push the right section to the far right */
+}

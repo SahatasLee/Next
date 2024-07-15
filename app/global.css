@@ -1,4 +1,9 @@
 * {
     margin: 0;
     padding: 0;
+    /* border-style: solid; */
+}
+
+nav > a {
+    padding-right: 10px;
 }
