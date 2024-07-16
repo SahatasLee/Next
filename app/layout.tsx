@@ -1,6 +1,7 @@
 import { Metadata } from 'next'
 import './global.css'
-import Navbar from './components/Navbar'
+import Navbar from './components/narbar/Navbar'
+import Footer from './components/footer/Footer'
 // import Link from 'next/link'
 
 export const metadata: Metadata = {
@@ -11,15 +12,12 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body>
-        {/* <nav>
-          <a href="/">Logo</a>
-          // <a href="/">Home</a>
-          <Link href="/">Home</Link>
-          <a href="/login">Login</a>
-        </nav> */}
+      <body className='layout'>
         <Navbar />
-        {children}
+        <div className='content'>
+          {children}
+        </div>
+        <Footer />
       </body>
     </html>
   )

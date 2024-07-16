@@ -4,7 +4,7 @@ const page = () => {
   return (
     <main>
       <header>
-        <p>Next.js</p>
+        <h1>Home Page</h1>
       </header>
     </main>
   );

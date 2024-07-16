@@ -14,3 +14,12 @@
 .right {
     margin-left: auto; /* push the right section to the far right */
 }
+
+.nav a {
+    /* color: white; */
+    text-decoration: none;
+}
+
+.nav a:hover {
+    text-decoration: underline;
+}
