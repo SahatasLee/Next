@@ -1,6 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
 import styles from './Narbar.module.css'
+import Links from './links/Links'
 
 const Navbar = () => {
   return (
@@ -9,10 +10,11 @@ const Navbar = () => {
           <div className='Logo'>
             <Link href="/">Logo</Link>
           </div>
-          <a href="/">Home</a>
+          {/* <a href="/">Home</a> */}
           {/* <Link href="/">Home</Link> */}
-          <Link href='/about'>About</Link>
-          <Link href='/contact'>Contact</Link>
+          {/* <Link href='/about'>About</Link>
+          <Link href='/contact'>Contact</Link> */}
+          <Links />
         </div>
         <div className={styles.right}>
             <Link href="/login">Login</Link>

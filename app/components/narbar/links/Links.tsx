@@ -23,7 +23,7 @@ const Links = () => {
             links.map(
                 (
                     link=>(
-                        <Link href={link.path}></Link>
+                        <Link href={link.path} key={link.title}>{link.title}</Link>
                     )
                 )
             )
