@@ -5,9 +5,9 @@ import Links from './links/Links'
 
 const Navbar = () => {
   return (
-    <nav className={styles.nav}>
+    <nav className={styles.container}>
         <div className={styles.left}>
-          <div className='Logo'>
+          <div className={styles.logo}>
             <Link href="/">Logo</Link>
           </div>
           {/* <a href="/">Home</a> */}

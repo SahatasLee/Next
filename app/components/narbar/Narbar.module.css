@@ -1,25 +1,30 @@
-.nav {
+.container {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1rem;
-    background-color: #f8f9fa; /* example background color */
+    /* background-color: #f8f9fa;  */
 }
 
 .left {
     display: flex;
-    gap: 1rem; /* space between links */
+    gap: 1rem; 
 }
 
 .right {
-    margin-left: auto; /* push the right section to the far right */
+    margin-left: auto; 
 }
 
-.nav a {
+.container a {
     /* color: white; */
     text-decoration: none;
 }
 
-.nav a:hover {
+.container a:hover {
     text-decoration: underline;
+}
+
+.logo {
+    font-size: 30px;
+    font-weight: bold;
 }
