@@ -6,19 +6,17 @@ import Links from './links/Links'
 const Navbar = () => {
   return (
     <nav className={styles.container}>
-        <div className={styles.left}>
-          <div className={styles.logo}>
-            <Link href="/">Logo</Link>
-          </div>
-          {/* <a href="/">Home</a> */}
-          {/* <Link href="/">Home</Link> */}
-          {/* <Link href='/about'>About</Link>
+      <div className={styles.logo}>
+        <Link href="/">Logo</Link>
+      </div>
+      {/* <a href="/">Home</a> */}
+      {/* <Link href="/">Home</Link> */}
+      {/* <Link href='/about'>About</Link>
           <Link href='/contact'>Contact</Link> */}
-          <Links />
-        </div>
-        <div className={styles.right}>
-            <Link href="/login">Login</Link>
-        </div>
+      <Links />
+      <div className={styles.right}>
+        <Link href="/login">Login</Link>
+      </div>
     </nav>
   )
 }

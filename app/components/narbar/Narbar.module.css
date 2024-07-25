@@ -6,11 +6,6 @@
     /* background-color: #f8f9fa;  */
 }
 
-.left {
-    display: flex;
-    gap: 1rem; 
-}
-
 .right {
     margin-left: auto; 
 }
