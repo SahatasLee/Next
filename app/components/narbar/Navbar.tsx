@@ -14,9 +14,9 @@ const Navbar = () => {
       {/* <Link href='/about'>About</Link>
           <Link href='/contact'>Contact</Link> */}
       <Links />
-      <div className={styles.right}>
+      {/* <div className={styles.right}>
         <Link href="/login">Login</Link>
-      </div>
+      </div> */}
     </nav>
   )
 }
