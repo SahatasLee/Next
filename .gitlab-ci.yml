@@ -19,9 +19,11 @@ deploy:
   before_script:
     - mkdir -p ~/.kube
     - ls -la
-    - echo $KUBECONFIG
+    # - echo $KUBECONFIG
     - cp $KUBECONFIG ~/.kube/config
   script:
-    - cat ~/.kube/config
-    - kubectl config get-contexts
-    - kubectl get nodes
+    # - cat ~/.kube/config
+    # - kubectl config get-contexts
+    # - kubectl get nodes
+    - kubectl apply -f ./deploy
+    - kubectl get po
