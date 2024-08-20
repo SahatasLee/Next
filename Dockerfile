@@ -1,5 +1,5 @@
 # Base image with Node.js and the necessary dependencies
-FROM node:18-alpine AS base
+FROM node:22-alpine3.19 AS base
 
 # Set working directory
 WORKDIR /app
