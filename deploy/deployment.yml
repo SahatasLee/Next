@@ -1,19 +1,19 @@
 apiVersion: app/v1
 kind: Deployment
 metadata:
-  name: next.my
+  name: next-my
 spec:
   replica: 3
   selector:
     matchLabels:
-      app: next.my
+      app: next-my
   template:
     metadata:
       labels:
-        app: next.my
+        app: next-my
     spec:
       containers:
       - image: $CI_REGISTRY/$CI_PROJECT_NAMESPACE/$CI_PROJECT_NAME:latest
-        name: next.my
+        name: next-my
         port:
         - containers: 3000
