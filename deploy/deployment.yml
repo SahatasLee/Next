@@ -13,7 +13,7 @@ spec:
         app: next-my
     spec:
       containers:
-      - image: $CI_REGISTRY/$CI_PROJECT_NAMESPACE/$CI_PROJECT_NAME:latest
+      - image: registry.thaibevapp.com/root/next.my:latest
         name: next-my
-        port:
+        ports:
         - containerPort: 3000
