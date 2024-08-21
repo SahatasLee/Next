@@ -1,5 +1,6 @@
 .imgContainer{
     position: relative;
-    width: 33vw;
-    height: 30vw;
+    width: 50vw;
+    height: calc(60vw * 1020 / 1982);
+    margin: auto;
 }
