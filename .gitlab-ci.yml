@@ -25,9 +25,9 @@ deploy:
     # - cat ~/.kube/config
     # - kubectl config get-contexts
     # - kubectl get nodes
-    - kubectl create secret docker-registry registry-gitlab \
-      --docker-server=$CI_REGISTRY \
-      --docker-username=$USERNAME \
+    - kubectl create secret docker-registry registry-gitlab
+      --docker-server=$CI_REGISTRY
+      --docker-username=$USERNAME
       --docker-password=$PASSWORD
     - kubectl apply -f ./deploy
     - kubectl get po
