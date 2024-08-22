@@ -25,11 +25,11 @@ deploy:
     # - cat ~/.kube/config
     # - kubectl config get-contexts
     # - kubectl get nodes
-    - echo $CI_REGISTRY $USERNAME $PASSWORD
-    - kubectl create secret docker-registry registry-gitlab
-      --docker-server=$CI_REGISTRY
-      --docker-username=$USERNAME
-      --docker-password=$PASSWORD
+    # - echo $CI_REGISTRY $USERNAME 
+    # - kubectl create secret docker-registry registry-gitlab
+    #   --docker-server=$CI_REGISTRY
+    #   --docker-username=$USERNAME
+    #   --docker-password=$PASSWORD
     - envsubst < ./deploy/deployment.yml | kubectl apply -f -
     # - kubectl apply -f ./deploy/deployment.yml
     - kubectl apply -f ./deploy/service.yml
