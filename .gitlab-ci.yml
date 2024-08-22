@@ -30,5 +30,7 @@ deploy:
       --docker-server=$CI_REGISTRY
       --docker-username=$USERNAME
       --docker-password=$PASSWORD
-    - kubectl apply -f ./deploy
+    - envsubst < ./deploy/deployment.yml | kubectl apply -f -
+    # - kubectl apply -f ./deploy/deployment.yml
+    - kubectl apply -f ./deploy/service.yml
     - kubectl get po
