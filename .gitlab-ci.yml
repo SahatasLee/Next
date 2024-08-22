@@ -12,6 +12,7 @@ build:
       --context "${CI_PROJECT_DIR}"
       --dockerfile "${CI_PROJECT_DIR}/Dockerfile"
       --destination $CI_REGISTRY/$CI_PROJECT_NAMESPACE/$CI_PROJECT_NAME:latest
+      --destination $CI_REGISTRY/$CI_PROJECT_NAMESPACE/$CI_PROJECT_NAME:${CI_PIPELINE_ID}
 
 deploy:
   stage: deploy
@@ -30,6 +31,7 @@ deploy:
     #   --docker-server=$CI_REGISTRY
     #   --docker-username=$USERNAME
     #   --docker-password=$PASSWORD
+    # Pass var from pipeline to deployment.yml
     - envsubst < ./deploy/deployment.yml | kubectl apply -f -
     # - kubectl apply -f ./deploy/deployment.yml
     - kubectl apply -f ./deploy/service.yml
