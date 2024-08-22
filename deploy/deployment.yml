@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: next-my
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: next-my
+  template:
+    metadata:
+      labels:
+        app: next-my
+    spec:
+      restartPolicy: Always
+      imagePullSecrets:
+      - name: registry-gitlab
+      containers:
+      # - image: registry.thaibevapp.com/root/next.my:latest
+      - image: $CI_REGISTRY/$CI_PROJECT_NAMESPACE/$CI_PROJECT_NAME:latest
+        name: next-my
+        ports:
+        - containerPort: 3000
